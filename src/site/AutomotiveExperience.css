@@ -1,0 +1,105 @@
+/* Root carries the background image — it shows through the transparent WebGL canvas */
+.automotive-experience { position: relative; background-image: url('/rp-home-background.png'); background-size: cover; background-position: center top; background-attachment: fixed; color: #f2f3ee; isolation: isolate; }
+.experience-world { position: sticky; top: 0; height: 100svh; min-height: 660px; margin-bottom: -100svh; overflow: hidden; pointer-events: none; }
+.experience-atmosphere, .experience-warmth, .experience-canvas, .experience-vignette { position: absolute; inset: 0; }
+/* Atmosphere is now a dark overlay over the background image */
+.experience-atmosphere { background: linear-gradient(135deg, rgba(8, 14, 20, 0.72) 0%, rgba(8, 14, 20, 0.45) 60%, rgba(8, 14, 20, 0.25) 100%); }
+.experience-warmth { background: radial-gradient(ellipse at 70% 38%, rgba(176, 132, 87, 0.18), transparent 52%); }
+.experience-canvas { z-index: 1; }
+.experience-vignette { z-index: 2; background: linear-gradient(90deg, rgba(8,14,20,0.82), rgba(8,14,20,0.18) 42%, transparent 62%), linear-gradient(0deg, rgba(8,14,20,0.9) 0%, transparent 22%, transparent 82%, rgba(8,14,20,0.5) 100%); }
+.experience-wordmark { position: absolute; top: 16%; left: 27%; font: 600 clamp(100px, 13.5vw, 240px)/1 var(--font-heading); letter-spacing: -.075em; color: #cce7fa05; white-space: nowrap; }
+.experience-studio-note { position: absolute; top: 113px; left: 5%; right: 5%; display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: .17em; color: #a1b2be; z-index: 3; }
+.experience-studio-note i { width: 5px; height: 5px; background: #d6b28b; border-radius: 50%; box-shadow: 0 0 13px #d6b28b; }
+.experience-studio-note > span { margin-left: auto; color: #7c939f; font-size: 8px; }
+.experience-chapters { position: relative; z-index: 4; pointer-events: none; }
+.experience-chapter { height: 100svh; min-height: 660px; padding: 140px 6% 140px; display: flex; align-items: center; scroll-margin-top: 0; }
+.experience-copy { width: 42%; max-width: 620px; }
+.experience-copy a { pointer-events: auto; }
+.experience-eyebrow { display: flex; align-items: center; gap: 13px; color: #a8bbc8; font-size: 9px; font-weight: 500; letter-spacing: .17em; margin-bottom: 24px; }
+.experience-eyebrow > span { padding: 6px 8px; border: 1px solid #a7bbcb38; color: #e2c09c; font: 10px monospace; }
+
+/* Hero reference layout styles */
+.hero-reference-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.hero-bar { display: block; width: 44px; height: 2px; background: #d8b695; flex-shrink: 0; }
+.hero-bar + span, .hero-reference-eyebrow > span { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.65); line-height: 1.6; text-transform: uppercase; }
+.hero-reference-heading { font-size: clamp(56px, 6.5vw, 105px) !important; line-height: 1.0 !important; font-weight: 800 !important; letter-spacing: -0.03em !important; margin-bottom: 0 !important; color: #ffffff !important; }
+.hero-reference-heading .is-accent { color: #d8b695 !important; display: block; }
+.hero-description-clean { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.72); margin-top: 24px; max-width: 420px; font-weight: 400; }
+.hero-reference-link { display: inline-flex; align-items: center; gap: 12px; background: rgba(216, 182, 149, 0.15); color: #d8b695 !important; font-weight: 600; padding: 14px 28px; border-radius: 3px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(216,182,149,0.5) !important; margin-top: 40px; transition: all 0.25s ease; }
+.hero-reference-link:hover { background: #d8b695; color: #0a0f16 !important; }
+
+.experience-copy h1, .experience-copy h2 { font-size: clamp(42px, 5.2vw, 86px); line-height: .99; font-weight: 500; letter-spacing: -.065em; color: #edf2ef; }
+.experience-copy h1 > span, .experience-copy h2 > span { display: block; }
+.experience-copy .is-accent { color: #d8b695; }
+.experience-description { max-width: 420px; color: rgba(168, 184, 193, 0.9); font-size: 15px; line-height: 1.75; margin-top: 24px; }
+.experience-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 32px; padding-block: 11px; border-bottom: 1px solid #bdcbd255; color: #eef1ec; font-size: 11px; }
+.experience-link:hover { border-color: #e2c09c; color: #e2c09c; }
+.experience-details { margin-top: 26px; padding-left: 15px; border-left: 1px solid #d5b28e70; }
+.experience-details > span { color: #d9b995; font-size: 11px; }
+.experience-details p { margin-top: 7px; font-size: 9px; color: #849ba8; }
+.experience-brands { margin-top: 34px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; font-size: 9px; letter-spacing: .12em; color: #dae3e7; }
+.experience-brands > i { height: 12px; width: 1px; background: #71848b; }
+.experience-brands small { display: block; width: 100%; color: #738996; font-size: 8px; letter-spacing: .15em; }
+.experience-object-note { position: absolute; bottom: 174px; right: 6%; z-index: 3; text-align: right; max-width: 350px; padding-right: 15px; border-right: 1px solid #d5b28e77; }
+.experience-object-note > span { display: block; color: #7f9bab; font-size: 8px; letter-spacing: .16em; margin-bottom: 10px; }
+.experience-object-note strong { font-weight: 400; font-size: 17px; color: #dce6e9; }
+.experience-object-note small { display: block; margin-top: 9px; font-size: 9px; color: #819ba9; }
+.experience-nav { position: absolute; left: 5%; right: 5%; bottom: 58px; z-index: 6; display: grid; grid-template-columns: repeat(9, 1fr); pointer-events: auto; gap: 16px; }
+.experience-nav button { padding: 15px 0 7px; background: none; border: 0; border-top: 1px solid #d2e1e029; text-align: left; cursor: pointer; color: #718997; display: flex; gap: 10px; align-items: center; }
+.experience-nav button span { font: 9px monospace; opacity: .7; }
+.experience-nav button b { font-size: 10px; font-weight: 400; white-space: nowrap; }
+.experience-nav button[aria-current], .experience-nav button:hover { border-color: #d8b695; color: #e3c29f; }
+.experience-baseline { position: absolute; bottom: 24px; left: 5%; right: 5%; z-index: 5; display: flex; align-items: center; justify-content: space-between; font-size: 7px; letter-spacing: .12em; color: #748a98; }
+.experience-baseline i { display: inline-block; width: 3px; height: 3px; background: #bdc7c2; border-radius: 50%; margin: 0 10px 2px; }
+.experience-baseline a { pointer-events: auto; color: #a7bbc7; letter-spacing: 0; font-size: 10px; }
+.experience-progress { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #d8b695; transform-origin: left; z-index: 6; }
+.experience-destinations { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 28px; }
+.experience-destinations a { display: flex; align-items: center; gap: 10px; font-size: 10px; color: #9baeb9; }
+.experience-loading { position: absolute; left: 64%; top: 47%; transform: translate(-50%, -50%); color: #b3c9d7; font-size: 10px; letter-spacing: .08em; text-align: center; }
+.experience-loading > span { display: block; margin: 0 auto 20px; width: 38px; height: 38px; border: 1px solid #d8b69530; border-top-color: #d8b695; border-radius: 50%; animation: studio-loading 1s linear infinite; }
+.experience-unavailable { position: absolute; inset: 20% 5% 20% 43%; display: grid; align-content: center; text-align: center; }
+.experience-unavailable img { width: 100%; opacity: .8; border-radius: 50%; }
+.experience-unavailable p { color: #c4d0d8; font-size: 11px; }
+.experience-credit { position: absolute; bottom: 3px; right: 5%; z-index: 7; font-size: 7px; color: #8498a3; }
+body:has(.automotive-experience) .site-header { background: #0c151eb8; border-bottom-color: #a9c1d41a; }
+body:has(.automotive-experience) .site-nav > a, body:has(.automotive-experience) .site-dropdown summary { color: #bdcbd4; }
+body:has(.automotive-experience) .site-nav > a.active { color: #e5c6a5; }
+body:has(.automotive-experience) .site-logo { background: #fafbf8; border-radius: 2px; padding-inline: 8px; }
+body:has(.automotive-experience) .site-nav .site-button--nav { background: transparent; border-color: #c5d2dc50; color: #e6ecef; }
+body:has(.automotive-experience) .site-menu { color: #d8e1e5; }
+body:has(.automotive-experience) .site-footer { background: #080e14; color: #9aacb7; border-top: 1px solid #ffffff18; }
+body:has(.automotive-experience) .site-footer a, body:has(.automotive-experience) .site-footer h3 { color: #bacbd6; }
+@keyframes studio-loading { to { transform: rotate(360deg); } }
+@media (min-width: 1800px) { .experience-copy { width: 33%; } }
+@media (max-width: 1100px) { .experience-copy { width: 41%; } .experience-copy h1, .experience-copy h2 { font-size: 6.2vw; } .experience-description { font-size: 12px; } .experience-nav { gap: 9px; } .experience-nav button { gap: 5px; } .experience-nav button b { font-size: 9px; } }
+@media (max-width: 900px) { body:has(.automotive-experience) .site-nav.is-open { background: #101b25; } body:has(.automotive-experience) .site-dropdown > div { background: #edf0ed; } }
+@media (max-width: 700px) {
+  .experience-world { min-height: 720px; }
+  .experience-chapter { min-height: 720px; padding: 0 6% 112px; align-items: flex-end; }
+  .experience-copy { width: 100%; max-width: none; }
+  .experience-copy h1, .experience-copy h2 { font-size: clamp(37px, 7.6vw, 52px); line-height: 1.04; letter-spacing: -.055em; }
+  .experience-copy h1 > span, .experience-copy h2 > span { display: inline; }
+  .experience-copy h1 > span::after, .experience-copy h2 > span::after { content: ' '; }
+  .experience-copy .is-accent { display: block; }
+  .experience-eyebrow { font-size: 8px; margin-bottom: 14px; }
+  .experience-description { font-size: 11px; line-height: 1.65; margin-top: 13px; max-width: 420px; }
+  .experience-link { margin-top: 12px; font-size: 10px; padding-block: 8px; }
+  .experience-details, .experience-brands, .experience-object-note { display: none; }
+  .experience-studio-note { top: 98px; left: 6%; font-size: 7px; }
+  .experience-studio-note > span { display: none; }
+  .experience-vignette { background: linear-gradient(0deg, #080e14 8%, #080e14ed 22%, #080e1480 43%, transparent 66%); }
+  .experience-wordmark { top: 24%; left: -2%; font-size: 18vw; }
+  .experience-nav { bottom: 47px; left: 6%; right: 6%; gap: 5px; }
+  .experience-nav button { display: block; padding-top: 9px; }
+  .experience-nav button span { font-size: 9px; }
+  .experience-nav button b { display: none; }
+  .experience-nav button[aria-current] span { color: #e3c29f; }
+  .experience-baseline { left: 6%; right: 6%; bottom: 22px; font-size: 6px; }
+  .experience-baseline > span:last-child { display: none; }
+  .experience-baseline a { font-size: 9px; }
+  .experience-loading { left: 50%; top: 32%; }
+  .experience-unavailable { inset: 14% 10% 48%; }
+  .experience-destinations { margin-top: 16px; }
+}
+@media (max-height: 720px) and (min-width: 701px) { .experience-world, .experience-chapter { min-height: 570px; } .experience-chapter { padding-top: 130px; padding-bottom: 115px; } .experience-copy h1, .experience-copy h2 { font-size: 57px; } .experience-description { margin-top: 14px; font-size: 11px; } .experience-details, .experience-brands { margin-top: 17px; } .experience-link { margin-top: 12px; } .experience-studio-note { top: 100px; } }
+@media (prefers-reduced-motion: reduce) { .experience-loading > span { animation: none; } }

@@ -1,0 +1,165 @@
+/* Brand Guidelines v1.0: dark automotive presentation using the approved
+   blue, sand, paper, white, ink and slate palette. Scroll layout stays in
+   AutomotiveExperience.css; this layer only styles colour and type. */
+.automotive-experience {
+  --rp-blue: #142C4F;
+  --thry-sand: #B49A74;
+  --warm-paper: #F5F2EC;
+  --brand-white: #FFFFFF;
+  --text-ink: #293544;
+  --brand-slate: #596575;
+  --brand-divider: #D9DEE5;
+  --chapter-accent: #D9DEE5;
+  background-color: #091426;
+  color: var(--brand-white);
+}
+.automotive-experience.is-thry { --chapter-accent: #B49A74; }
+.experience-atmosphere {
+  background: radial-gradient(ellipse at 73% 42%, #243e604f, transparent 52%), linear-gradient(135deg, #09142688, #142C4F66 68%, #0b192d55);
+}
+.experience-warmth {
+  background: radial-gradient(ellipse at 71% 41%, #B49A7429, transparent 54%), linear-gradient(135deg, #09142655, #17293e44 67%, #111e2e33);
+}
+.experience-vignette {
+  background: linear-gradient(90deg, #091426bb, #09142655 39%, transparent 60%), linear-gradient(0deg, #09142688 1%, transparent 24%, transparent 85%, #09142655);
+}
+.experience-wordmark { font-weight: 700; letter-spacing: -.04em; color: #F5F2EC0b; }
+.experience-studio-note { color: var(--warm-paper); font-size: 11px; letter-spacing: .12em; }
+.experience-studio-note i { background: var(--thry-sand); box-shadow: 0 0 12px #B49A7480; }
+.experience-studio-note > span { color: #a5b0bf; font-size: 9px; }
+.experience-copy { width: 38%; max-width: 550px; }
+.experience-eyebrow { color: var(--thry-sand); font: 600 10px/20px var(--font-body); letter-spacing: .16em; margin-bottom: 25px; }
+.experience-eyebrow > span { border: 0; padding: 0 10px 0 0; color: #a5b0bf; font: 500 10px/1.2 var(--font-body); }
+.experience-chapter--hero .experience-eyebrow > span { display: none; }
+.experience-copy h1, .experience-copy h2 { font-size: clamp(44px, 4.6vw, 72px); line-height: 1.1; font-weight: 600; letter-spacing: -.04em; color: var(--brand-white); }
+.experience-copy .is-accent { color: #B49A74; }
+.experience-chapter:nth-child(n+6):nth-child(-n+8) .experience-copy .is-accent { color: var(--thry-sand); }
+.experience-description { max-width: 350px; color: #bbc4ce; font-size: 14px; line-height: 1.8; margin-top: 28px; }
+.experience-link { color: var(--brand-white); border-color: #B49A7480; font: 500 12px/20px var(--font-body); margin-top: 27px; padding-bottom: 13px; }
+.experience-link:hover { color: var(--warm-paper); border-color: var(--thry-sand); }
+.experience-details { border-left-color: var(--chapter-accent); margin-top: 24px; }
+.experience-details > span { color: var(--warm-paper); font: 600 13px/20px var(--font-body); }
+.experience-chapter:nth-child(n+6):nth-child(-n+8) .experience-details > span { color: var(--thry-sand); }
+.experience-details p { color: #dce3ea; font-size: 11px; }
+.experience-brands { color: #a5b0bf; font: 500 9px/18px var(--font-body); margin-top: 35px; letter-spacing: .12em; }
+.experience-brands > i { background: #D9DEE588; }
+.experience-brands small { color: #dce3ea; font-size: 10px; letter-spacing: .08em; }
+.experience-object-note { border-right-color: #B49A7460; bottom: 157px; }
+.experience-object-note > span { color: #dce3ea; font-size: 10px; letter-spacing: .1em; }
+.experience-object-note strong { color: var(--warm-paper); font: 500 13px/22px var(--font-heading); }
+.experience-object-note small { color: #a5b0bf; font-size: 9px; }
+.experience-nav button { color: #a5b0bf; border-top-color: #D9DEE52b; }
+.experience-nav button span { font: 600 10px/16px var(--font-body); }
+.experience-nav button b { font: 500 11px/18px var(--font-body); }
+.experience-nav button[aria-current], .experience-nav button:hover { color: var(--brand-white); border-color: var(--chapter-accent); }
+.experience-baseline { color: #a5b0bf; font-size: 8px; letter-spacing: .1em; }
+.experience-baseline i { background: var(--thry-sand); }
+.experience-baseline a { color: var(--brand-white); font-size: 11px; }
+.experience-progress { background: var(--chapter-accent); }
+.experience-destinations a { color: var(--brand-white); font: 600 12px/18px var(--font-body); }
+.experience-loading { color: var(--brand-white); font-size: 12px; }
+.experience-loading > span { border-color: #B49A745e; border-top-color: var(--thry-sand); }
+.experience-unavailable p { color: var(--brand-white); font-size: 12px; }
+.experience-credit { color: #dce3ea; font-size: 8px; }
+body:has(.automotive-experience) .site-header { background: #091426b8; border-bottom-color: #D9DEE526; }
+@media (min-width: 1201px) {
+  body:has(.automotive-experience) .site-logo img { width: 360px; height: 68px; }
+  body:has(.automotive-experience) .site-nav { gap: 18px; }
+}
+body:has(.automotive-experience) .site-nav > a,
+body:has(.automotive-experience) .site-dropdown summary { color: #F5F2EC; }
+body:has(.automotive-experience) .site-nav > a.active { color: #B49A74; }
+body:has(.automotive-experience) .site-logo { background: transparent; border: 1px solid #D9DEE52e; border-radius: 2px; padding-inline: 12px; }
+/* Reverse the existing raster for this dark surface without altering the master.
+   Screen blending makes its now-black canvas disappear into the header. */
+body:has(.automotive-experience) .site-logo img { filter: grayscale(1) invert(1) brightness(1.55); mix-blend-mode: screen; }
+body:has(.automotive-experience) .site-nav .site-button--nav { background: #B49A74; border-color: #B49A74; color: #142C4F; font-weight: 600; }
+body:has(.automotive-experience) .site-menu { color: #FFFFFF; }
+body:has(.automotive-experience) .site-footer { background: #142C4F; color: #F5F2EC; border-top-color: #D9DEE540; }
+body:has(.automotive-experience) .site-footer a,
+body:has(.automotive-experience) .site-footer h3 { color: #FFFFFF; }
+body:has(.automotive-experience) .site-footer .site-logo { display: inline-block; }
+body:has(.automotive-experience) :focus-visible { outline: 2px solid #B49A74; outline-offset: 4px; }
+@media (max-width: 1100px) {
+  .experience-copy { width: 43%; }
+  .experience-copy h1, .experience-copy h2 { font-size: clamp(42px, 4.7vw, 60px); }
+  .experience-nav button b { font-size: 11px; }
+}
+@media (max-width: 900px) {
+  body:has(.automotive-experience) .site-nav.is-open { background: #142C4F; }
+  body:has(.automotive-experience) .site-dropdown > div { background: #F5F2EC; }
+  body:has(.automotive-experience) .site-dropdown a { color: #142C4F; }
+}
+@media (max-width: 700px) {
+  .experience-copy { width: 100%; }
+  .experience-copy h1, .experience-copy h2 { font-size: clamp(37px, 8vw, 52px); line-height: 1.04; }
+  .experience-eyebrow { font-size: 10px; margin-bottom: 12px; }
+  .experience-description { font-size: 13px; line-height: 1.6; margin-top: 12px; }
+  .experience-link { font-size: 11px; margin-top: 11px; }
+  .experience-studio-note { font-size: 9px; }
+  .experience-vignette { background: linear-gradient(0deg, #091426 8%, #091426ea 22%, #09142680 43%, transparent 66%); }
+  .experience-nav button span { font-size: 10px; }
+  .experience-nav button[aria-current] span { color: #B49A74; }
+  .experience-baseline { font-size: 8px; }
+  .experience-baseline a { font-size: 9px; }
+}
+
+/* One viewport contains the architecture, vehicle and floor. Keeping the image
+   here avoids background-attachment: fixed cropping differently on mobile. */
+.automotive-experience { --studio-height: max(660px, 100svh); background-image: none; background-color: #060e18; }
+.experience-world { height: var(--studio-height); min-height: 0; margin-bottom: calc(-1 * var(--studio-height)); background: #060e18 url('/rp-home-background.png') center center / 100% 100% no-repeat; }
+.experience-chapter { height: var(--studio-height); min-height: 0; }
+.experience-atmosphere { background: linear-gradient(90deg, #040d17c9 0%, #07111d40 40%, #07111d0a 72%); }
+.experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18a6 10%, transparent 30%), linear-gradient(90deg, #040d172e, transparent 55%); }
+.experience-warmth { background: radial-gradient(ellipse at 75% 55%, #b49a741c, transparent 58%); }
+.experience-chapter--hero { align-items: flex-start; padding-top: clamp(150px, 22svh, 245px); }
+.experience-chapter--hero .experience-copy { width: 39%; max-width: 540px; }
+.experience-copy .hero-reference-heading { font-size: clamp(54px, 5.6vw, 94px) !important; line-height: 1.02 !important; font-weight: 600 !important; letter-spacing: -.055em !important; }
+.hero-reference-eyebrow { gap: 19px; margin-bottom: 24px; }
+.hero-reference-eyebrow > span:not(.hero-bar) { font-size: 10px; font-weight: 500; letter-spacing: .21em; color: #b4bdc6; }
+.hero-bar { width: 42px; background: #d8b695; }
+.hero-description-clean { max-width: 370px; font-size: clamp(13px, 1.1vw, 17px); line-height: 1.65; margin-top: 22px; color: #b8c1ca; }
+.experience-copy .hero-reference-link { margin-top: 26px; padding: 17px 23px; min-height: 50px; background: #d8b695; color: #111a25 !important; border: 1px solid #d8b695 !important; border-radius: 6px; font-size: 10px; font-weight: 600; letter-spacing: .05em; gap: 26px; }
+.experience-copy .hero-reference-link:hover { background: #ead0b2; border-color: #ead0b2 !important; transform: translateY(-2px); }
+.experience-object-note { bottom: 120px; }
+.is-hero .experience-object-note { visibility: hidden; }
+.experience-studio-note { top: 112px; opacity: .7; }
+.experience-nav { gap: 20px; bottom: 52px; }
+.experience-nav button { padding-top: 13px; }
+body:has(.automotive-experience) .site-header { background: #060e1833; backdrop-filter: blur(12px); border-bottom-color: #d9dee51a; }
+body:has(.automotive-experience) .site-header .site-logo { border: 0; padding: 0; }
+body:has(.automotive-experience) .site-header .site-logo img { width: 250px; height: 62px; }
+body:has(.automotive-experience) .site-nav .site-button--nav { background: transparent; color: #d8b695; border-color: #b49a74; border-radius: 8px; }
+body:has(.automotive-experience) .site-nav > a:not(.site-button):hover { color: #d8b695; }
+@media (max-width: 1100px) and (min-width: 701px) {
+  .experience-copy .hero-reference-heading { font-size: clamp(45px, 5.6vw, 62px) !important; }
+  body:has(.automotive-experience) .site-header .site-logo img { width: 190px; }
+  .hero-description-clean { font-size: 13px; }
+}
+@media (max-width: 700px) {
+  .automotive-experience { --studio-height: max(760px, 100svh); }
+  .experience-world { background-size: auto 65%; background-position: 62% top; }
+  .experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18 38%, #060e1880 49%, transparent 67%); }
+  .experience-chapter--hero { align-items: flex-end; padding: 0 6% 112px; }
+  .experience-chapter--hero .experience-copy { width: 100%; max-width: none; }
+  .experience-copy .hero-reference-heading { font-size: clamp(42px, 10vw, 60px) !important; }
+  .hero-reference-eyebrow { margin-bottom: 16px; gap: 14px; }
+  .hero-reference-eyebrow > span:not(.hero-bar) { font-size: 8px; }
+  .hero-bar { width: 30px; }
+  .hero-description-clean { max-width: 350px; font-size: 13px; margin-top: 15px; }
+  .experience-copy .hero-reference-link { margin-top: 19px; min-height: 46px; padding: 13px 20px; }
+  body:has(.automotive-experience) .site-header .site-logo img { width: 190px; height: 52px; }
+  .experience-nav { gap: 5px; bottom: 47px; }
+}
+@media (max-height: 720px) and (min-width: 701px) {
+  .automotive-experience { --studio-height: max(570px, 100svh); }
+  .experience-chapter--hero { padding-top: 140px; }
+  .experience-copy .hero-reference-heading { font-size: clamp(46px, 5.3vw, 72px) !important; }
+  .hero-reference-eyebrow { margin-bottom: 18px; }
+  .hero-description-clean { margin-top: 16px; }
+  .experience-copy .hero-reference-link { margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-copy .hero-reference-link { transition: none; }
+  .experience-copy .hero-reference-link:hover { transform: none; }
+}

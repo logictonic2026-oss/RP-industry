@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/* =============================================
+   RP GROUP — Brand Design System v1.0
+   Colours: #142C4F (RP Blue) | #B49A74 (Thry Beige)
+   Fonts:   Manrope (headings) | Inter (body)
+   Layout:  max 1200px | 70% white / 20% blue / 10% beige
+   ============================================= */
+
+:root {
+  /* ── Brand Colours ── */
+  --rp-blue:       #142C4F;   /* RP Industries, headings, primary actions */
+  --thry-beige:    #B49A74;   /* Thry Co, printing half, accents */
+  --paper:         #F5F2EC;   /* Soft backgrounds, section panels */
+  --white:         #FFFFFF;   /* Primary canvas */
+  --ink:           #293544;   /* Body copy, tables */
+  --slate:         #596575;   /* Captions, supporting text */
+  --divider:       #D9DEE5;   /* Borders, rules */
+
+  /* ── Derived ── */
+  --rp-blue-light:   rgba(20, 44, 79, 0.08);
+  --thry-beige-light: rgba(180, 154, 116, 0.12);
+  --rp-blue-mid:     rgba(20, 44, 79, 0.15);
+
+  /* ── Typography ── */
+  --font-heading: 'Manrope', Arial, sans-serif;
+  --font-body:    'Inter', Arial, sans-serif;
+
+  /* ── Spacing (8-pt scale) ── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+
+  /* ── Border Radius ── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  20px;
+
+  /* ── Transitions ── */
+  --transition: 0.2s ease;
+  --transition-md: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =============================================
+   Reset & Base
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: auto; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--rp-blue); text-decoration: none; }
+ul { list-style: none; }
+:focus-visible { outline: 3px solid var(--rp-blue); outline-offset: 3px; }
+
+/* =============================================
+   Layout
+   ============================================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-6);
+}
+
+.section      { padding: var(--sp-20) 0; }
+.section-sm   { padding: var(--sp-12) 0; }
+.text-center  { text-align: center; }
+
+/* =============================================
+   Typography — brand-exact sizes
+   ============================================= */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--rp-blue);
+  letter-spacing: -0.01em;
+}
+
+/* H1 — Hero */
+.h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+/* H2 — Section */
+.h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+/* H3 — Card */
+.h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+/* Body */
+.body-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--ink);
+}
+
+/* Caption / label */
+.caption {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--slate);
+}
+
+/* Mobile overrides */
+@media (max-width: 767px) {
+  .h1 { font-size: 32px; line-height: 40px; }
+  .h2 { font-size: 26px; line-height: 34px; }
+  .h3 { font-size: 20px; line-height: 28px; }
+  .section  { padding: var(--sp-12) 0; }
+  .section-sm { padding: var(--sp-8) 0; }
+}
+
+/* Colour utilities */
+.text-blue  { color: var(--rp-blue); }
+.text-beige { color: var(--thry-beige); }
+.text-ink   { color: var(--ink); }
+.text-slate { color: var(--slate); }
+.text-white { color: var(--white); }
+
+/* =============================================
+   Buttons
+   ============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-md);
+  white-space: nowrap;
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+/* Primary — RP Blue */
+.btn-primary {
+  background: var(--rp-blue);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(20, 44, 79, 0.25);
+}
+.btn-primary:hover {
+  background: #1a3a6b;
+  box-shadow: 0 4px 16px rgba(20, 44, 79, 0.35);
+}
+
+/* Secondary — outline */
+.btn-outline {
+  background: transparent;
+  color: var(--rp-blue);
+  border: 1.5px solid var(--rp-blue);
+}
+.btn-outline:hover {
+  background: var(--rp-blue-light);
+}
+
+/* Beige — Thry Co accent */
+.btn-beige {
+  background: var(--thry-beige);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(180, 154, 116, 0.3);
+}
+.btn-beige:hover {
+  background: #a08860;
+  box-shadow: 0 4px 16px rgba(180, 154, 116, 0.4);
+}
+
+/* Ghost beige outline */
+.btn-outline-beige {
+  background: transparent;
+  color: var(--thry-beige);
+  border: 1.5px solid var(--thry-beige);
+}
+.btn-outline-beige:hover {
+  background: var(--thry-beige-light);
+}
+
+/* =============================================
+   Cards
+   ============================================= */
+.card {
+  background: var(--white);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  transition: var(--transition-md);
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(20, 44, 79, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-rp {
+  border-top: 3px solid var(--rp-blue);
+}
+
+.card-thry {
+  border-top: 3px solid var(--thry-beige);
+}
+
+.card-paper {
+  background: var(--paper);
+  border-color: transparent;
+}
+
+/* =============================================
+   Badges / Labels
+   ============================================= */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-rp {
+  background: var(--rp-blue-light);
+  color: var(--rp-blue);
+  border: 1px solid rgba(20, 44, 79, 0.2);
+}
+
+.badge-thry {
+  background: var(--thry-beige-light);
+  color: var(--thry-beige);
+  border: 1px solid rgba(180, 154, 116, 0.3);
+}
+
+/* =============================================
+   Dividers
+   ============================================= */
+.divider-line {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: var(--sp-8) 0;
+}
+
+.accent-bar {
+  display: block;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  margin: var(--sp-4) 0 var(--sp-6);
+}
+
+.accent-bar-rp   { background: var(--rp-blue); }
+.accent-bar-thry { background: var(--thry-beige); }
+.accent-bar-center { margin-left: auto; margin-right: auto; }
+
+/* =============================================
+   Section label (overline)
+   ============================================= */
+.overline {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+  display: block;
+}
+
+.overline-rp   { color: var(--rp-blue); }
+.overline-thry { color: var(--thry-beige); }
+
+/* =============================================
+   Tag pills
+   ============================================= */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+.tag {
+  padding: 3px 10px;
+  background: var(--paper);
+  border: 1px solid var(--divider);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--slate);
+  font-family: var(--font-body);
+}
+
+/* =============================================
+   Icon circles
+   ============================================= */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle-rp {
+  background: var(--rp-blue-light);
+  color: var(--rp-blue);
+}
+
+.icon-circle-thry {
+  background: var(--thry-beige-light);
+  color: var(--thry-beige);
+}
+
+/* =============================================
+   Grid Layouts
+   ============================================= */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-8); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-8); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-6); }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .container { padding: 0 var(--sp-4); }
+}
+
+/* =============================================
+   Stat items
+   ============================================= */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-1);
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: var(--rp-blue);
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--slate);
+  font-weight: 500;
+}
+
+/* =============================================
+   Form Elements
+   ============================================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.form-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1.5px solid var(--divider);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  width: 100%;
+  transition: border-color var(--transition);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--rp-blue);
+  box-shadow: 0 0 0 3px rgba(20, 44, 79, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--slate);
+  opacity: 0.7;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select option { background: var(--white); }
+
+/* =============================================
+   Section backgrounds
+   ============================================= */
+.bg-white  { background: var(--white); }
+.bg-paper  { background: var(--paper); }
+.bg-blue   { background: var(--rp-blue); }
+.bg-beige  { background: var(--thry-beige); }
+
+/* =============================================
+   Animations
+   ============================================= */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up  { animation: fadeInUp 0.5s ease both; }
+.animate-fade     { animation: fadeIn 0.5s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* =============================================
+   Scrollbar
+   ============================================= */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: var(--divider); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--slate); }
+
+/* =============================================
+   Page wrapper
+   ============================================= */
+.page-wrapper { min-height: 100vh; }

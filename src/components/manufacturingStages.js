@@ -1,0 +1,24 @@
+export const manufacturingStages = [
+  { id: 'assembled', short: 'The car', title: 'One car. Many ways to make it.', eyebrow: 'Explore the engineering', part: 'The complete assembly', description: 'Scroll to open the car. Follow seven manufacturing processes from precision metalwork to printed prototypes.', detail: 'Scroll to disassemble', material: '7 processes · 2 manufacturing arms', link: '/rfq', linkLabel: 'Start your project', color: '#c9b898' },
+  { id: 'vmc', short: 'VMC', title: 'Precision starts inside.', eyebrow: 'RP Industries / 01', part: 'Engine housing', description: 'VMC machining creates the flat mating faces, bores and mounting holes that let engine housings fit together accurately.', detail: 'Facing · drilling · pocket milling', material: 'Representative aluminium housing', link: '/rp-industries/vmc', linkLabel: 'Explore VMC machining', color: '#90c8eb' },
+  { id: 'billet', short: 'Billet', title: 'Carved from solid metal.', eyebrow: 'RP Industries / 02', part: 'Mounting bracket', description: 'A solid aluminium billet becomes a lightweight bracket, with machined pockets, mounting holes and carefully controlled geometry.', detail: 'Profiles · pockets · mounting bores', material: 'Representative billet aluminium bracket', link: '/rp-industries/billet', linkLabel: 'Explore billet machining', color: '#90c8eb' },
+  { id: 'rubber', short: 'Rubber', title: 'The flexible connections.', eyebrow: 'RP Industries / 03', part: 'Gasket & isolation bushing', description: 'Gaskets seal mating surfaces. Rubber bushings isolate vibration between assemblies, bringing compliance where rigid parts meet.', detail: 'Sealing · vibration isolation', material: 'Representative elastomer components', link: '/rp-industries/rubber', linkLabel: 'Explore rubber components', color: '#90c8eb' },
+  { id: 'jigs', short: 'Jigs & fixtures', title: 'Accuracy, on repeat.', eyebrow: 'RP Industries / 04', part: 'Locating & clamping fixture', description: 'A dedicated fixture locates and holds a component for machining or inspection. It belongs on the production floor, not inside the vehicle.', detail: 'Locating pins · clamps · repeatability', material: 'Representative manufacturing tooling', link: '/rp-industries/jigs', linkLabel: 'Explore jigs & fixtures', color: '#90c8eb' },
+  { id: 'fdm', short: 'FDM', title: 'Test the fit. Refine the form.', eyebrow: 'Thry Co / 05', part: 'Centre-console prototype', description: 'FDM builds a console concept layer by layer. Check proportions, clearances and assembly fit before investing in production tooling.', detail: 'Form & fit · fast design iterations', material: 'Illustrative printed polymer prototype', link: '/tryco/fdm', linkLabel: 'Explore FDM printing', color: '#dfb580' },
+  { id: 'sla', short: 'SLA', title: 'Bring the fine details to light.', eyebrow: 'Thry Co / 06', part: 'Lamp-lens design prototype', description: 'SLA captures fine details and smooth surfaces in resin. A clear lens concept supports appearance and assembly reviews after suitable finishing.', detail: 'Fine features · surface finish · visual review', material: 'Illustrative resin prototype, not certified optics', link: '/tryco/sla', linkLabel: 'Explore SLA printing', color: '#dfb580' },
+  { id: 'sls', short: 'SLS', title: 'Let the geometry flow.', eyebrow: 'Thry Co / 07', part: 'Air duct & mounting tabs', description: 'SLS produces complex nylon geometries without dedicated support structures. Explore curved ducts and integrated mounting features for functional testing.', detail: 'Complex passages · integrated features', material: 'Illustrative nylon duct; application validation required', link: '/tryco/sls', linkLabel: 'Explore SLS printing', color: '#dfb580' },
+  { id: 'complete', short: 'Together', title: 'From the first idea to the final fit.', eyebrow: 'RP Group / One manufacturing partner', part: 'The complete assembly', description: 'Precision machining and additive manufacturing, connected. Share your drawing and find the right process for your next component.', detail: 'Machining + additive manufacturing', material: 'Your design. The right process.', link: '/rfq', linkLabel: 'Discuss your component', color: '#c9b898' },
+];
+
+export const LAST_STAGE = manufacturingStages.length - 1;
+export const stageAtProgress = progress => Math.max(0, Math.min(LAST_STAGE, Math.floor(progress * LAST_STAGE + 0.5)));
+
+// Each stage holds its pose, then transitions into the next. All camera,
+// component and shell motion read this same timeline; no competing springs.
+export function timelineAt(progress) {
+  const position = Math.max(0, Math.min(LAST_STAGE, progress * LAST_STAGE));
+  const from = Math.min(LAST_STAGE, Math.floor(position));
+  const to = Math.min(LAST_STAGE, from + 1);
+  const t = Math.max(0, Math.min(1, (position - from - 0.15) / 0.7));
+  return { from, to, mix: t * t * (3 - 2 * t) };
+}
