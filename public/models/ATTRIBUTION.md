@@ -10,7 +10,7 @@ Ferrari 458 Italia by vicent091036, distributed with the Three.js examples.
 
 The vehicle illustrates manufacturing applications; it does not claim a supply
 relationship with Ferrari or that the depicted components use a specific process.
-Visible author credit and source link are included in the website section.
+Author credit, source, license and modification details are included on the website credits page, linked from the footer.
 
 ## Manufacturing examples
 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 /* =============================================
-   RP GROUP — Brand Design System v1.0
+   AARPEE GROUP — Brand Design System v1.0
    Colours: #142C4F (RP Blue) | #B49A74 (Thry Beige)
    Fonts:   Manrope (headings) | Inter (body)
    Layout:  max 1200px | 70% white / 20% blue / 10% beige
@@ -9,7 +9,7 @@
 
 :root {
   /* ── Brand Colours ── */
-  --rp-blue:       #142C4F;   /* RP Industries, headings, primary actions */
+  --rp-blue:       #142C4F;   /* AARPEE Industries, headings, primary actions */
   --thry-beige:    #B49A74;   /* Thry Co, printing half, accents */
   --paper:         #F5F2EC;   /* Soft backgrounds, section panels */
   --white:         #FFFFFF;   /* Primary canvas */

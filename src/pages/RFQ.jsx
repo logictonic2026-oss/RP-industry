@@ -3,7 +3,7 @@ import { Settings, Zap, HelpCircle, CheckCircle, ArrowRight, FileUp, X } from 'l
 import './RFQ.css';
 
 const processOptions = [
-  { id: 'cnc',  icon: <Settings size={28} />, label: 'CNC Machining',    sub: 'VMC · Billet · Rubber · Jigs', color: 'rp',  arm: 'RP Industries' },
+  { id: 'cnc',  icon: <Settings size={28} />, label: 'CNC Machining',    sub: 'VMC · Billet · Rubber · Jigs', color: 'rp',  arm: 'AARPEE Industries' },
   { id: '3dp',  icon: <Zap size={28} />,      label: '3D Printing',      sub: 'FDM · SLA · SLS',              color: 'thry',arm: 'Thry Co' },
   { id: 'help', icon: <HelpCircle size={28} />,label: 'Help Me Choose',   sub: "We'll guide you",              color: 'neutral', arm: 'Joint Assessment' },
 ];
@@ -44,7 +44,7 @@ export default function RFQ() {
           <span className="accent-bar accent-bar-rp" style={{ display: 'block' }} />
           <h1 className="h1" style={{ marginTop: 16 }}>Request a Quote</h1>
           <p style={{ color: 'var(--slate)', marginTop: 12, fontSize: 17, maxWidth: 520, lineHeight: 1.65 }}>
-            Smart routing sends CNC requests to RP Industries and 3D print requests to Thry Co automatically.
+            Smart routing sends CNC requests to AARPEE Industries and 3D print requests to Thry Co automatically.
           </p>
         </div>
       </div>

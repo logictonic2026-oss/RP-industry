@@ -1,0 +1,185 @@
+/* Final presentation layer: restrained typography, flat surfaces and fine rules. */
+body { background: #fafaf7; }
+.site-header,
+body:has(.automotive-experience) .site-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 84px;
+  padding-inline: 5%;
+  border: 0;
+  border-bottom: 1px solid #142c4f12;
+  border-radius: 0;
+  background: #fafaf7f2;
+  box-shadow: none;
+  backdrop-filter: blur(16px);
+}
+body:has(.automotive-experience) .site-header { background: #09131ee6; border-bottom-color: #ffffff12; }
+.site-header .site-logo,
+body:has(.automotive-experience) .site-header .site-logo { background: #ffffff; padding: 0; border: 0; }
+.site-logo,
+body:has(.automotive-experience) .site-logo {
+  position: relative;
+  width: 268px;
+  height: 62px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.site-logo img,
+body:has(.automotive-experience) .site-logo img,
+.site-header .site-logo img,
+body:has(.automotive-experience) .site-header .site-logo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 260px;
+  max-width: none;
+  height: 86px;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+.site-logo img,
+body:has(.automotive-experience) .site-logo img { filter: none; mix-blend-mode: normal; opacity: 1; }
+.site-nav,
+body:has(.automotive-experience) .site-nav { gap: 28px; }
+.site-nav > a,
+.site-dropdown summary,
+body:has(.automotive-experience) .site-nav > a,
+body:has(.automotive-experience) .site-dropdown summary {
+  font: 400 14px/1.5 var(--font-body);
+  letter-spacing: -.01em;
+}
+body:has(.automotive-experience) .site-nav > a,
+body:has(.automotive-experience) .site-dropdown summary { color: #bdc6d0; }
+.site-nav > a.active { color: #142c4f; }
+body:has(.automotive-experience) .site-nav > a.active { color: #e4c6a4; }
+body:has(.automotive-experience) .site-nav > a:not(.site-button):hover { color: #e4c6a4; }
+body:has(.automotive-experience) .site-menu { color: #edf3f8; }
+.site-nav > a.active { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 1px; }
+.site-button,
+.site-nav .site-button--nav,
+body:has(.automotive-experience) .site-nav .site-button--nav {
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+body:has(.automotive-experience) .site-nav .site-button--nav {
+  color: #e4c6a4;
+  border-color: #c5aa8559;
+  background: transparent;
+  padding: 12px 18px;
+  min-height: 44px;
+  gap: 22px;
+}
+body:has(.automotive-experience) .site-nav .site-button--nav:hover { background: #c5aa8510; border-color: #c5aa85; }
+.site-dropdown > div { border-radius: 4px; box-shadow: 0 12px 30px #09131e14; }
+.site-dropdown strong { font-size: 14px; font-weight: 500; }
+.site-dropdown a span { font-size: 12px; }
+body:has(.automotive-experience) .site-dropdown > div { background: #111e2a; border-color: #ffffff18; }
+body:has(.automotive-experience) .site-dropdown strong { color: #e5ebf0; font-size: 14px; font-weight: 500; }
+body:has(.automotive-experience) .site-dropdown a span { color: #aab8c6; font-size: 12px; }
+body:has(.automotive-experience) .site-dropdown a:hover { background: #ffffff06; }
+
+.experience-copy h2 { font-weight: 400; letter-spacing: -.045em; }
+.experience-copy .hero-reference-heading { font-weight: 500 !important; }
+.hero-reference-eyebrow > span:not(.hero-bar) { font-weight: 400; color: #aebbc8; }
+.experience-copy button { pointer-events: auto; cursor: pointer; }
+.experience-copy .hero-reference-link {
+  background: transparent;
+  border: 1px solid #c5aa855e !important;
+  color: #e4c6a4 !important;
+  border-radius: 4px;
+  text-transform: none;
+  font: 400 15px/1.4 var(--font-body);
+  letter-spacing: 0;
+  padding: 14px 22px;
+  min-height: 52px;
+  margin-top: 28px;
+  box-shadow: none;
+}
+.experience-copy .hero-reference-link:hover { background: #c5aa8510; border-color: #c5aa85 !important; transform: none; }
+.experience-eyebrow { font-weight: 400; color: #c2ad91; letter-spacing: .12em; }
+.experience-eyebrow > span { font-weight: 400; }
+.experience-link { font-weight: 400; }
+.experience-object-note {
+  left: 58%;
+  right: 12%;
+  bottom: 140px;
+  max-width: 410px;
+  padding: 0 0 0 18px;
+  border: 0;
+  border-left: 1px solid #c5aa8559;
+  text-align: left;
+  text-shadow: 0 2px 12px #06101d;
+}
+.experience-object-note > span { font-size: 11px; color: #b3c0cc; }
+.experience-object-note strong { display: block; color: #f0ede7; font: 400 clamp(18px, 1.3vw, 23px)/1.4 var(--font-heading); }
+.experience-object-note small { font-size: 14px; line-height: 1.55; color: #cad3dd; }
+.experience-vignette {
+  background: linear-gradient(90deg, #060e18f0 0%, #060e18d9 25%, #060e18a6 40%, #060e184d 52%, transparent 64%),
+    linear-gradient(0deg, #060e18 0%, #060e18d9 11%, #060e1873 20%, transparent 32%);
+}
+.experience-nav { background: none; border: 0; border-radius: 0; padding: 0; box-shadow: none; gap: 20px; }
+.experience-nav button { background: none; box-shadow: none; border: 0; border-top: 1px solid #ffffff26; border-radius: 0; padding: 14px 0 7px; font-weight: 400; }
+.experience-nav button b { font-size: 14px; font-weight: 400; }
+.experience-nav button span { font-weight: 400; }
+.experience-nav button[aria-current], .experience-nav button:hover { color: #e4c6a4; border-color: #c5aa85; box-shadow: none; }
+.experience-details > span { font-weight: 400; }
+.experience-destinations a { font-weight: 400; }
+
+/* Service pages retain the readable type sizes without raised cards. */
+.part-panel, .project-form, .about-image { border-radius: 4px; box-shadow: none; }
+.project-form label { font-size: 15px; }
+.project-form input, .project-form textarea { background: #fafbf9; font-size: 16px; padding: 14px; border-radius: 3px; box-shadow: none; }
+.project-form input::placeholder, .project-form textarea::placeholder { font-size: 15px; color: #647487; }
+.process-picker { gap: 12px; }
+.process-picker strong { font-size: 15px; }
+.process-picker > button > span { font-size: 11px; }
+.form-steps button { font-size: 13px; }
+.form-steps button > span { width: 28px; height: 28px; font-size: 12px; }
+.reference-files strong { font-size: 14px; }
+.reference-files p, .field-note, .brief-summary > div, .form-error { font-size: 13px; }
+.process-tags > a { font-size: 12px; padding: 7px 10px; }
+.credits-content { max-width: 800px; padding-block: 0 100px; }
+.credits-content h2 { font-size: 24px; font-weight: 500; margin-bottom: 24px; }
+.credits-content p { color: #596575; font-size: 16px; line-height: 1.8; margin-bottom: 18px; }
+.credits-content a { color: #142c4f; text-decoration: underline; text-underline-offset: 3px; }
+.footer-baseline { flex-wrap: wrap; }
+:focus-visible { outline: 2px solid #426f9e; outline-offset: 4px; }
+
+@media (max-width: 1100px) {
+  .site-header, body:has(.automotive-experience) .site-header { padding-inline: 4%; gap: 16px; }
+  .site-header .site-logo, body:has(.automotive-experience) .site-header .site-logo { width: 194px; height: 48px; }
+  .site-header .site-logo img, body:has(.automotive-experience) .site-header .site-logo img { width: 184px; height: 61px; }
+  .site-nav, body:has(.automotive-experience) .site-nav { gap: 18px; }
+  body:has(.automotive-experience) .site-nav .site-button--nav { padding-inline: 12px; gap: 12px; }
+  .experience-object-note { left: 57%; right: 8%; bottom: 156px; }
+  .experience-nav { gap: 10px; }
+  .experience-nav button b { font-size: 13px; }
+}
+@media (max-width: 900px) {
+  .site-header, body:has(.automotive-experience) .site-header { height: 76px; padding-inline: 6%; }
+  .site-nav.is-open, body:has(.automotive-experience) .site-nav.is-open { gap: 0; background: #fafaf7; }
+  body:has(.automotive-experience) .site-nav.is-open { background: #09131e; }
+  .site-nav > a, .site-dropdown summary, body:has(.automotive-experience) .site-nav > a, body:has(.automotive-experience) .site-dropdown summary { font-size: 16px; }
+}
+@media (max-width: 700px) {
+  .site-header .site-logo, body:has(.automotive-experience) .site-header .site-logo { width: 216px; height: 52px; }
+  .site-header .site-logo img, body:has(.automotive-experience) .site-header .site-logo img { width: 208px; height: 69px; }
+  .experience-copy .hero-reference-heading { font-weight: 500 !important; }
+  .experience-copy .hero-reference-link { margin-top: 20px; }
+  .experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18f5 35%, #060e18bd 48%, #060e184d 62%, transparent 76%); }
+  .experience-details { display: block; margin-top: 14px; padding-left: 12px; }
+  .experience-details > span { font-size: 16px; }
+  .experience-details p { font-size: 13px; margin-top: 3px; }
+  .experience-nav { gap: 5px; }
+  .experience-nav button span { font-size: 15px; }
+  .experience-object-note { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-copy .hero-reference-link { transition: none; }
+}

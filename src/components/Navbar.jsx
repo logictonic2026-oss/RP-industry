@@ -6,15 +6,15 @@ import './Navbar.css';
 const navItems = [
   { label: 'Home', path: '/' },
   {
-    label: 'RP Industries',
-    path: '/rp-industries',
+    label: 'AARPEE Industries',
+    path: '/aarpee-industries',
     color: 'rp',
     children: [
-      { label: 'Overview', path: '/rp-industries' },
-      { label: 'VMC Machining', path: '/rp-industries/vmc' },
-      { label: 'Billet Machining', path: '/rp-industries/billet' },
-      { label: 'Rubber Components', path: '/rp-industries/rubber' },
-      { label: 'Jigs & Fixtures', path: '/rp-industries/jigs' },
+      { label: 'Overview', path: '/aarpee-industries' },
+      { label: 'VMC Machining', path: '/aarpee-industries/vmc' },
+      { label: 'Billet Machining', path: '/aarpee-industries/billet' },
+      { label: 'Rubber Components', path: '/aarpee-industries/rubber' },
+      { label: 'Jigs & Fixtures', path: '/aarpee-industries/jigs' },
     ],
   },
   {
@@ -53,8 +53,8 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={() => setMobileOpen(false)}>
           <img
-            src="/rp-group-logo.png"
-            alt="RP Group — RP Industries | Thry Co"
+            src="/aarpee-group-logo.png"
+            alt="AARPEE Group — AARPEE Industries | Thry Co"
             className="navbar__logo-img"
           />
         </Link>

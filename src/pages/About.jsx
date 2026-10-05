@@ -3,13 +3,13 @@ import { ArrowRight, Shield, Zap, Settings } from 'lucide-react';
 import './About.css';
 
 const timeline = [
-  { year: '1994', event: 'RP Industries founded in Pune, Maharashtra. First CNC machines installed.' },
+  { year: '1994', event: 'AARPEE Industries founded in Pune, Maharashtra. First CNC machines installed.' },
   { year: '2001', event: 'First Tier 1 automotive contract — rubber seals for a major OEM.' },
   { year: '2008', event: 'Expanded to VMC machining for engine block components.' },
   { year: '2014', event: 'ISO quality certification achieved. 100+ active clients.' },
   { year: '2019', event: 'Thry Co division launched — entering 3D printing & additive manufacturing.' },
   { year: '2022', event: 'Portfolio expanded to SLA & SLS. First art & craft clients onboarded.' },
-  { year: '2024', event: 'RP Group unified portal launched — one hub, two manufacturing arms.' },
+  { year: '2024', event: 'AARPEE Group unified portal launched — one hub, two manufacturing arms.' },
 ];
 
 const values = [
@@ -32,7 +32,7 @@ export default function About() {
             The 30-Year Legacy &amp; the Future of Hybrid Manufacturing
           </h1>
           <p className="about-header__sub">
-            RP Group is built on three decades of trust, precision, and relentless improvement —
+            AARPEE Group is built on three decades of trust, precision, and relentless improvement —
             now unified with the creative power of additive manufacturing.
           </p>
         </div>
@@ -62,9 +62,9 @@ export default function About() {
             <div className="icon-circle icon-circle-rp" style={{ marginBottom: 16 }}>
               <Settings size={22} />
             </div>
-            <h2 className="h2" style={{ marginBottom: 16 }}>RP Industries</h2>
+            <h2 className="h2" style={{ marginBottom: 16 }}>AARPEE Industries</h2>
             <p style={{ color: 'var(--slate)', lineHeight: 1.7, marginBottom: 12 }}>
-              Since 1994, RP Industries has served the most demanding segment of manufacturing — the
+              Since 1994, AARPEE Industries has served the most demanding segment of manufacturing — the
               automotive industry. VMC machining, billet processing, rubber components and jig &amp;
               fixture capabilities built on precision engineering and rigorous QC.
             </p>
@@ -72,8 +72,8 @@ export default function About() {
               Every component meets the standards demanded by Tier 1 and Tier 2 automotive suppliers,
               with tight tolerances, high-strength materials and robust inspection processes.
             </p>
-            <Link to="/rp-industries" className="btn btn-outline">
-              Explore RP Industries <ArrowRight size={15} />
+            <Link to="/aarpee-industries" className="btn btn-outline">
+              Explore AARPEE Industries <ArrowRight size={15} />
             </Link>
           </div>
 
@@ -143,7 +143,7 @@ export default function About() {
       {/* CTA */}
       <section className="section-sm bg-paper" style={{ borderTop: '1px solid var(--divider)' }}>
         <div className="container text-center">
-          <h2 className="h2">Ready to work with RP Group?</h2>
+          <h2 className="h2">Ready to work with AARPEE Group?</h2>
           <p style={{ color: 'var(--slate)', marginTop: 12, marginBottom: 24, fontSize: 16 }}>
             CNC machining or 3D printing — start your project today.
           </p>

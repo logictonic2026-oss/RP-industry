@@ -32,28 +32,28 @@ const rpServices = [
     icon: <Settings size={22} />,
     title: 'VMC Machining',
     desc: '3-5 axis vertical machining with tight tolerances for engine blocks, brackets and automotive enclosures.',
-    link: '/rp-industries/vmc',
+    link: '/aarpee-industries/vmc',
     tags: ['Engine Blocks', 'Brackets', 'Enclosures'],
   },
   {
     icon: <Wrench size={22} />,
     title: 'Billet Machining',
     desc: 'Superior structural strength from solid metal billets — aluminium, steel and titanium for high-stress applications.',
-    link: '/rp-industries/billet',
+    link: '/aarpee-industries/billet',
     tags: ['Aluminium', 'Steel', 'Titanium'],
   },
   {
     icon: <Layers size={22} />,
     title: 'Rubber Components',
     desc: 'Custom seals, gaskets and vibration dampeners engineered for heat, oil and pressure environments.',
-    link: '/rp-industries/rubber',
+    link: '/aarpee-industries/rubber',
     tags: ['Silicone', 'EPDM', 'Nitrile'],
   },
   {
     icon: <Factory size={22} />,
     title: 'Jigs & Fixtures',
     desc: 'Custom tooling that ensures repeatability, reduces errors and speeds up QC on assembly lines.',
-    link: '/rp-industries/jigs',
+    link: '/aarpee-industries/jigs',
     tags: ['Mass Production', 'Assembly', 'QA Tooling'],
   },
 ];
@@ -128,7 +128,7 @@ export default function Home() {
         {/* Split capability strip */}
         <div className="hero__split">
           <div className="hero__split-rp">
-            <span className="hero__split-label">RP Industries</span>
+            <span className="hero__split-label">AARPEE Industries</span>
             <span className="hero__split-sub">VMC · Billet · Rubber · Jigs</span>
           </div>
           <div className="hero__split-divider">
@@ -164,7 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── RP INDUSTRIES ── */}
+      {/* ── AARPEE INDUSTRIES ── */}
       <section className="section rp-section">
         <div className="container">
           <motion.div 
@@ -175,7 +175,7 @@ export default function Home() {
             variants={fadeUp}
           >
             <div>
-              <span className="overline overline-rp">RP Industries — Conventional Machining</span>
+              <span className="overline overline-rp">AARPEE Industries — Conventional Machining</span>
               <span className="accent-bar accent-bar-rp" style={{ display: 'block' }} />
               <h2 className="h2">The Automotive Legacy<br />Built Over 30 Years</h2>
               <p style={{ marginTop: 16, color: 'var(--slate)', maxWidth: 500, lineHeight: '1.65' }}>
@@ -183,7 +183,7 @@ export default function Home() {
                 Trusted by Tier 1 & Tier 2 automotive suppliers for three decades.
               </p>
             </div>
-            <Link to="/rp-industries" className="btn btn-outline rp-section__more-btn">
+            <Link to="/aarpee-industries" className="btn btn-outline rp-section__more-btn">
               All Services <ArrowRight size={15} />
             </Link>
           </motion.div>
@@ -311,7 +311,7 @@ export default function Home() {
               <h2 className="h2 rfq-cta-box__headline">Ready to Start Your Project?</h2>
               <p className="rfq-cta-box__sub">
                 Upload your CAD files, specify your requirements — our smart routing sends
-                CNC requests to RP Industries and 3D print requests to Thry Co automatically.
+                CNC requests to AARPEE Industries and 3D print requests to Thry Co automatically.
               </p>
             </div>
             <div className="rfq-cta-box__right">

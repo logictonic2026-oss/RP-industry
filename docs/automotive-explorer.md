@@ -1,8 +1,20 @@
 # Automotive explorer
 
-The homepage's second section is a full-screen 3D scroll sequence at
-`/#manufacturing`. A single continuous timeline controls the camera, body
-sectioning, wheel separation, component extraction and reassembly.
+The homepage is a full-screen 3D scroll sequence. The assembled vehicle starts
+on a concrete floor inside an authored manufacturing bay with CNC machines,
+steel columns, ceiling lights and painted bay markings. Architecture, floor,
+vehicle and shadows use the same world-space camera; there is no composited
+photographic floor.
+
+Scrolling to `/#manufacturing` opens the body and introduces the first component.
+A single reversible timeline controls body sectioning, component extraction and
+reassembly. On the homepage the camera, vehicle scale and wheel positions stay
+fixed throughout the sequence. On desktop and tablet the car and extracted
+components are anchored at 73% of the viewport width, leaving the copy clear
+on the left. Camera framing reserves room for the opened body; bay markings
+and contact shadows follow the same anchor. Mobile retains its stacked layout.
+The model's minimum Y matches its wheel minimum
+Y, and the vehicle translation aligns it with the floor at Y = -0.19.
 
 | Stage | Featured object | Application |
 | --- | --- | --- |
@@ -26,7 +38,11 @@ Application reference: https://formlabs.com/industries/automotive/
 ## Files and performance
 
 - `manufacturingStages.js`: service copy and shared stage timeline.
-- `CarScroller.jsx` / `.css`: full-screen presentation and accessible controls.
+- `AutomotiveExperience.jsx` / `.css` / `AutomotiveBrand.css` / `Minimal.css`: homepage chapters, responsive presentation and controls. The final minimal theme uses a flat header, light typography and thin chapter dividers.
+- `chapterPresentation.js`: reversible copy and heading opacity curves. Headings start fading before body copy; reduced motion retains static readable copy.
+- `CreditsPage.jsx`: vehicle source, license and modification details, linked from the footer rather than the scroll scene.
+- `EngineeringStudio.jsx`: manufacturing bay, physical floor and contact shadows.
+- `CarScroller.jsx` / `.css`: alternative embedded presentation.
 - `CarScene.jsx`: car preparation, camera framing and component extraction.
 - `manufacturingParts.js`: authored example geometry. This module runs offline,
   not in the browser.
@@ -35,9 +51,10 @@ Application reference: https://formlabs.com/industries/automotive/
 
 The 3D bundle is loaded near the section. Draco files and models are local.
 Component meshes are merged by material and indexed before export. The canvas
-uses demand rendering, a capped pixel ratio and no realtime shadow passes. Lenis
+uses demand rendering, a capped pixel ratio, one 1024px directional shadow map
+and a 256px contact-shadow pass. Lenis
 owns the only page-scroll interpolation loop and cleans it up on unmount. Reduced
-motion uses a static-height section with explicit stage controls.
+motion snaps the homepage to chapter poses rather than interpolating motion.
 
 ## Checks
 
@@ -46,5 +63,10 @@ The tests cover triangle sectioning, geometry validity, component/process mappin
 and continuous reversible timeline transitions. The website has unrelated lint
 warnings in Home, Footer and RFQ.
 
-Browser screenshot capture was unavailable during this revision, so final visual
-and device-specific frame-rate review remains necessary.
+The production build and all eight presentation/geometry/manufacturing tests pass. Lint has
+only the existing warnings in Home, Footer and RFQ. Asset-bound verification
+confirmed zero gap between the wheel minimum and model minimum. Projection
+checks at six desktop/tablet sizes keep the complete and opened body between
+50.2% and 95.8% of viewport width, clear of the text. Chrome loaded
+the revised homepage and reported the scene ready. Screenshot capture timed out,
+so final desktop/mobile visual and frame-rate review remains necessary.

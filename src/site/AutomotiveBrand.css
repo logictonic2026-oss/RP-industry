@@ -70,9 +70,7 @@ body:has(.automotive-experience) .site-nav > a,
 body:has(.automotive-experience) .site-dropdown summary { color: #F5F2EC; }
 body:has(.automotive-experience) .site-nav > a.active { color: #B49A74; }
 body:has(.automotive-experience) .site-logo { background: transparent; border: 1px solid #D9DEE52e; border-radius: 2px; padding-inline: 12px; }
-/* Reverse the existing raster for this dark surface without altering the master.
-   Screen blending makes its now-black canvas disappear into the header. */
-body:has(.automotive-experience) .site-logo img { filter: grayscale(1) invert(1) brightness(1.55); mix-blend-mode: screen; }
+/* The brand asset keeps its original colors; Minimal.css supplies its surface. */
 body:has(.automotive-experience) .site-nav .site-button--nav { background: #B49A74; border-color: #B49A74; color: #142C4F; font-weight: 600; }
 body:has(.automotive-experience) .site-menu { color: #FFFFFF; }
 body:has(.automotive-experience) .site-footer { background: #142C4F; color: #F5F2EC; border-top-color: #D9DEE540; }
@@ -104,13 +102,12 @@ body:has(.automotive-experience) :focus-visible { outline: 2px solid #B49A74; ou
   .experience-baseline a { font-size: 9px; }
 }
 
-/* One viewport contains the architecture, vehicle and floor. Keeping the image
-   here avoids background-attachment: fixed cropping differently on mobile. */
+/* One viewport and camera contain the manufacturing unit, vehicle and floor. */
 .automotive-experience { --studio-height: max(660px, 100svh); background-image: none; background-color: #060e18; }
-.experience-world { height: var(--studio-height); min-height: 0; margin-bottom: calc(-1 * var(--studio-height)); background: #060e18 url('/rp-home-background.png') center center / 100% 100% no-repeat; }
+.experience-world { height: var(--studio-height); min-height: 0; margin-bottom: calc(-1 * var(--studio-height)); background: #253440; }
 .experience-chapter { height: var(--studio-height); min-height: 0; }
-.experience-atmosphere { background: linear-gradient(90deg, #040d17c9 0%, #07111d40 40%, #07111d0a 72%); }
-.experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18a6 10%, transparent 30%), linear-gradient(90deg, #040d172e, transparent 55%); }
+.experience-atmosphere { background: none; }
+.experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18a6 10%, transparent 30%), linear-gradient(90deg, #040d17ed 0%, #040d1799 30%, transparent 57%); }
 .experience-warmth { background: radial-gradient(ellipse at 75% 55%, #b49a741c, transparent 58%); }
 .experience-chapter--hero { align-items: flex-start; padding-top: clamp(150px, 22svh, 245px); }
 .experience-chapter--hero .experience-copy { width: 39%; max-width: 540px; }
@@ -138,7 +135,7 @@ body:has(.automotive-experience) .site-nav > a:not(.site-button):hover { color: 
 }
 @media (max-width: 700px) {
   .automotive-experience { --studio-height: max(760px, 100svh); }
-  .experience-world { background-size: auto 65%; background-position: 62% top; }
+  .experience-world { background: #253440; }
   .experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18 38%, #060e1880 49%, transparent 67%); }
   .experience-chapter--hero { align-items: flex-end; padding: 0 6% 112px; }
   .experience-chapter--hero .experience-copy { width: 100%; max-width: none; }
@@ -162,4 +159,146 @@ body:has(.automotive-experience) .site-nav > a:not(.site-button):hover { color: 
 @media (prefers-reduced-motion: reduce) {
   .experience-copy .hero-reference-link { transition: none; }
   .experience-copy .hero-reference-link:hover { transform: none; }
+}
+/* Readable typography with a clear hierarchy. Continuous scene shading keeps
+   the copy legible without placing the experience inside opaque cards. */
+.automotive-experience {
+  --copy-title-size: clamp(50px, 4.6vw, 80px);
+  --copy-body-size: clamp(18px, 1.35vw, 22px);
+}
+.experience-chapter { padding-top: 144px; padding-bottom: 152px; }
+.experience-chapter--hero { padding-top: clamp(150px, 22svh, 230px); }
+.experience-copy,
+.experience-chapter--hero .experience-copy {
+  position: relative;
+  width: 42%;
+  max-width: 580px;
+  isolation: isolate;
+  overflow-wrap: break-word;
+}
+.experience-copy::before { content: none; }
+.experience-vignette {
+  background: linear-gradient(90deg, #060e18f0 0%, #060e18d9 25%, #060e18a6 40%, #060e184d 52%, transparent 64%),
+    linear-gradient(0deg, #060e18 0%, #060e18c9 10%, transparent 27%);
+}
+.experience-copy h1,
+.experience-copy h2 { font-size: var(--copy-title-size); line-height: 1.08; letter-spacing: -.04em; }
+.experience-copy .hero-reference-heading {
+  font-size: clamp(62px, 5.8vw, 104px) !important;
+  line-height: 1.04 !important;
+}
+.experience-eyebrow { font-size: 12px; line-height: 1.6; letter-spacing: .15em; margin-bottom: 22px; }
+.experience-eyebrow > span { font-size: 12px; color: #93a4b4; }
+.hero-reference-eyebrow { margin-bottom: 24px; }
+.hero-reference-eyebrow > span:not(.hero-bar) { font-size: 12px; line-height: 1.65; letter-spacing: .17em; color: #bdc8d4; }
+.hero-description-clean,
+.experience-description {
+  font-size: var(--copy-body-size);
+  line-height: 1.6;
+  max-width: 500px;
+  color: #d4dde6;
+  margin-top: 22px;
+}
+.experience-link { font-size: 15px; line-height: 1.5; min-height: 44px; margin-top: 26px; gap: 24px; }
+.experience-copy .hero-reference-link { font-size: 13px; line-height: 1.4; min-height: 52px; padding: 16px 24px; margin-top: 28px; border-radius: 4px; }
+.experience-details { margin-top: 20px; }
+.experience-details > span { font-size: 16px; line-height: 1.5; font-weight: 500; }
+.experience-details p { font-size: 14px; line-height: 1.6; color: #aebdcb; }
+.experience-destinations { gap: 12px 24px; margin-top: 22px; }
+.experience-destinations a { font-size: 16px; line-height: 1.5; min-height: 36px; }
+.experience-studio-note { top: 112px; opacity: .8; }
+.experience-studio-note > span { font-size: 11px; line-height: 1.5; letter-spacing: .13em; color: #b5c1ce; }
+.experience-object-note {
+  bottom: 132px;
+  max-width: min(380px, 38vw);
+  padding: 0 16px 0 0;
+  background: none;
+  border: 0;
+  border-right: 1px solid #b49a7466;
+  border-radius: 0;
+}
+.experience-object-note > span { font-size: 11px; line-height: 1.4; margin-bottom: 8px; color: #afbdca; }
+.experience-object-note strong { font-size: 16px; line-height: 1.5; font-weight: 500; }
+.experience-object-note small { font-size: 13px; line-height: 1.5; color: #acbbc9; margin-top: 6px; }
+.experience-nav { bottom: 56px; gap: 20px; }
+.experience-nav button { min-width: 0; min-height: 48px; gap: 9px; align-items: baseline; padding-top: 14px; color: #aebdcc; }
+.experience-nav button span { font-size: 11px; line-height: 1.5; opacity: .85; }
+.experience-nav button b { font-size: 14px; line-height: 1.4; font-weight: 500; white-space: normal; }
+.experience-baseline { bottom: 24px; font-size: 11px; line-height: 1.5; letter-spacing: .07em; color: #aebdcc; gap: 18px; }
+.experience-baseline a { font-size: 13px; }
+.experience-credit { font-size: 11px; line-height: 1.4; }
+.experience-loading,
+.experience-unavailable p { font-size: 16px; line-height: 1.6; }
+body:has(.automotive-experience) .site-header { background: #060e1866; backdrop-filter: blur(16px); }
+body:has(.automotive-experience) .site-nav > a,
+body:has(.automotive-experience) .site-dropdown summary { font-size: 14px; line-height: 1.5; }
+body:has(.automotive-experience) .site-nav .site-button--nav { font-size: 14px; min-height: 46px; }
+body:has(.automotive-experience) .site-dropdown strong { font-size: 16px; }
+body:has(.automotive-experience) .site-dropdown a span { font-size: 14px; }
+body:has(.automotive-experience) .footer-brand > p,
+body:has(.automotive-experience) .footer-brand > a:last-child,
+body:has(.automotive-experience) .footer-grid h3,
+body:has(.automotive-experience) .footer-grid > div:not(:first-child) > a { font-size: 16px; line-height: 1.6; }
+body:has(.automotive-experience) .footer-baseline { font-size: 13px; line-height: 1.5; }
+
+@media (max-width: 1100px) and (min-width: 701px) {
+  .experience-nav { gap: 10px; }
+  .experience-nav button { display: block; }
+  .experience-nav button span { display: block; margin-bottom: 4px; }
+  .experience-nav button b { font-size: 13px; }
+  .experience-baseline > span:last-child { display: none; }
+  .experience-object-note { bottom: 148px; }
+  .experience-copy .hero-reference-heading { font-size: clamp(52px, 6.1vw, 68px) !important; }
+  body:has(.automotive-experience) .site-nav { gap: 14px; }
+  body:has(.automotive-experience) .site-nav > a,
+  body:has(.automotive-experience) .site-dropdown summary { font-size: 14px; }
+  body:has(.automotive-experience) .site-header { padding-inline: 20px; gap: 16px; }
+  body:has(.automotive-experience) .site-header .site-logo img { width: 190px; }
+  body:has(.automotive-experience) .site-nav .site-button--nav { padding-inline: 12px; gap: 10px; }
+}
+@media (max-width: 900px) {
+  body:has(.automotive-experience) .site-nav.is-open { background: #060e18; }
+  body:has(.automotive-experience) .site-nav > a,
+  body:has(.automotive-experience) .site-dropdown summary { font-size: 18px; }
+}
+@media (max-height: 760px) and (min-width: 701px) {
+  .automotive-experience { --copy-title-size: clamp(46px, 4.4vw, 62px); --copy-body-size: 18px; }
+  .experience-chapter { padding-top: 112px; padding-bottom: 144px; }
+  .experience-chapter--hero { padding-top: 120px; }
+  .experience-copy .hero-reference-heading { font-size: clamp(52px, 5.5vw, 76px) !important; }
+  .hero-reference-eyebrow { margin-bottom: 14px; }
+  .hero-reference-eyebrow > span:not(.hero-bar) { font-size: 13px; line-height: 1.4; }
+  .hero-description-clean, .experience-description { margin-top: 14px; line-height: 1.5; }
+  .experience-link, .experience-copy .hero-reference-link { margin-top: 16px; min-height: 48px; }
+  .experience-details { margin-top: 12px; }
+  .experience-details p { margin-top: 4px; }
+  .experience-studio-note { display: none; }
+}
+@media (max-width: 700px) {
+  .automotive-experience { --copy-title-size: clamp(40px, 10vw, 52px); --copy-body-size: 17px; }
+  .experience-chapter,
+  .experience-chapter--hero { padding: 0 6% 124px; align-items: flex-end; }
+  .experience-copy,
+  .experience-chapter--hero .experience-copy { width: 100%; max-width: none; }
+  .experience-copy::before { content: none; }
+  .experience-vignette { background: linear-gradient(0deg, #060e18 0%, #060e18f5 35%, #060e18bd 48%, #060e184d 62%, transparent 76%); }
+  .experience-copy .hero-reference-heading { font-size: clamp(46px, 11.5vw, 62px) !important; }
+  .experience-copy h1 > span,
+  .experience-copy h2 > span { display: block; }
+  .hero-reference-eyebrow { margin-bottom: 14px; }
+  .hero-reference-eyebrow > span:not(.hero-bar) { font-size: 12px; letter-spacing: .09em; }
+  .experience-eyebrow, .experience-eyebrow > span { font-size: 13px; }
+  .experience-eyebrow { margin-bottom: 12px; }
+  .hero-description-clean, .experience-description { max-width: none; margin-top: 14px; line-height: 1.55; }
+  .experience-copy .hero-reference-link { min-height: 50px; font-size: 13px; margin-top: 20px; padding: 14px 20px; }
+  .experience-link { font-size: 15px; margin-top: 14px; }
+  .experience-destinations { gap: 6px 16px; margin-top: 12px; }
+  .experience-destinations a { font-size: 15px; }
+  .experience-nav { bottom: 56px; gap: 5px; }
+  .experience-nav button { min-height: 44px; padding-top: 12px; }
+  .experience-nav button span { font-size: 15px; }
+  .experience-nav button b { display: none; }
+  .experience-baseline { bottom: 24px; font-size: 10px; gap: 12px; letter-spacing: .02em; }
+  .experience-baseline a { font-size: 12px; }
+  .experience-credit { font-size: 10px; }
 }

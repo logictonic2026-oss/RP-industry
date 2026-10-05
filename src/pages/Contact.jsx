@@ -17,7 +17,7 @@ export default function Contact() {
         <div className="container">
           <span className="overline overline-rp">Get in Touch</span>
           <span className="accent-bar accent-bar-rp" style={{ display: 'block' }} />
-          <h1 className="h1" style={{ marginTop: 16 }}>Contact RP Group</h1>
+          <h1 className="h1" style={{ marginTop: 16 }}>Contact AARPEE Group</h1>
           <p style={{ color: 'var(--slate)', marginTop: 12, fontSize: 17, maxWidth: 500, lineHeight: 1.65 }}>
             General inquiries, facility visits, or want to learn more? Our team will respond within 24 hours.
           </p>
@@ -31,7 +31,7 @@ export default function Contact() {
             <div className="card card-rp">
               <h2 className="h3" style={{ marginBottom: 20 }}>Our Locations</h2>
               {[
-                { badge: 'rp', name: 'RP Industries HQ', lines: ['Plot 42, MIDC Industrial Area', 'Pune, Maharashtra 411 019', 'India'] },
+                { badge: 'rp', name: 'AARPEE Industries HQ', lines: ['Plot 42, MIDC Industrial Area', 'Pune, Maharashtra 411 019', 'India'] },
                 { badge: 'thry', name: 'Thry Co Studio', lines: ['Level 2, Innovation Hub', 'Hinjewadi, Pune 411 057', 'India'] },
               ].map((loc, i) => (
                 <div key={i} style={{ display: 'flex', gap: 14, marginBottom: i === 0 ? 20 : 0, paddingBottom: i === 0 ? 20 : 0, borderBottom: i === 0 ? '1px solid var(--divider)' : 'none' }}>

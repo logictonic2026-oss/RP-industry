@@ -9,7 +9,7 @@ const services = [
     desc: '3-axis to 5-axis VMC capability with tight tolerances on engine blocks, brackets, and automotive enclosures. Serving Tier 1 & Tier 2 automotive suppliers for 30 years.',
     caps: ['3-5 Axis CNC VMC', 'Engine Blocks', 'Complex Brackets', 'Automotive Enclosures'],
     sectors: ['Tier 1 & Tier 2 Automotive', 'Heavy Engineering', 'Aerospace'],
-    link: '/rp-industries/vmc',
+    link: '/aarpee-industries/vmc',
   },
   {
     icon: <Wrench size={26} />, title: 'Billet Machining',
@@ -17,7 +17,7 @@ const services = [
     desc: 'Custom components milled from solid metal billets (aluminium, steel, titanium) for superior structural strength over cast parts — ideal for high-stress automotive use.',
     caps: ['Aluminium Billet', 'Steel Billet', 'Titanium Billet', 'High-stress parts'],
     sectors: ['Performance Automotive', 'Custom Auto Parts', 'Heavy Machinery'],
-    link: '/rp-industries/billet',
+    link: '/aarpee-industries/billet',
   },
   {
     icon: <Layers size={26} />, title: 'Rubber Components',
@@ -25,7 +25,7 @@ const services = [
     desc: 'Custom O-rings, gaskets, vibration dampeners and seals in Silicone, EPDM and Nitrile — engineered for automotive heat, oil and pressure environments.',
     caps: ['Custom O-rings', 'Gaskets & Seals', 'Vibration Dampeners', 'Silicone / EPDM / Nitrile'],
     sectors: ['Automotive OEM', 'Industrial Hydraulics', 'Fluid Dynamics'],
-    link: '/rp-industries/rubber',
+    link: '/aarpee-industries/rubber',
   },
   {
     icon: <Factory size={26} />, title: 'Jigs & Fixtures',
@@ -33,7 +33,7 @@ const services = [
     desc: 'Custom jigs ensure repeatability, reduce assembly errors and speed up QC for large-scale manufacturing. The backbone of efficient automotive assembly lines.',
     caps: ['Custom Jig Design', 'Assembly Fixtures', 'QC Inspection Jigs', 'Line Efficiency'],
     sectors: ['Assembly Line Managers', 'Production Engineers', 'Factory Operations'],
-    link: '/rp-industries/jigs',
+    link: '/aarpee-industries/jigs',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function RPIndustries() {
     <div className="page-wrapper sov-page">
       <div className="sov-header sov-header--rp">
         <div className="container">
-          <span className="badge badge-rp">RP Industries — Conventional Machining</span>
+          <span className="badge badge-rp">AARPEE Industries — Conventional Machining</span>
           <h1 className="h1 sov-header__h1">30 Years of Automotive Manufacturing Legacy</h1>
           <p className="sov-header__sub">
             Rigorous, standard-driven, focused on tight tolerances and production volume.
@@ -58,7 +58,7 @@ export default function RPIndustries() {
       <section className="section">
         <div className="container">
           <div className="text-center" style={{ marginBottom: 48 }}>
-            <span className="overline overline-rp">Why RP Industries</span>
+            <span className="overline overline-rp">Why AARPEE Industries</span>
             <span className="accent-bar accent-bar-rp accent-bar-center" style={{ display: 'block' }} />
             <h2 className="h2" style={{ marginTop: 16 }}>Built on Trust &amp; Precision</h2>
           </div>
@@ -121,7 +121,7 @@ export default function RPIndustries() {
       <section className="section-sm" style={{ background: 'var(--rp-blue)', textAlign: 'center' }}>
         <div className="container">
           <h2 className="h2" style={{ color: 'var(--white)', marginBottom: 12 }}>Ready to start your machining project?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: 24 }}>Upload your CAD files and get a quote from our RP Industries team.</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: 24 }}>Upload your CAD files and get a quote from our AARPEE Industries team.</p>
           <Link to="/rfq" className="btn" style={{ background: 'var(--white)', color: 'var(--rp-blue)' }}>
             Request Machining Quote <ArrowRight size={15} />
           </Link>

@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const sectors = [
-  { emoji: '🚗', name: 'Automotive OEM',      arm: 'RP Industries', color: 'rp',   sub: 'Tier 1 & Tier 2 Suppliers', desc: 'Engine blocks, brackets, rubber seals, gaskets — 30 years of automotive manufacturing trust.', services: ['VMC Machining', 'Billet Machining', 'Rubber Seals', 'Jigs & Fixtures'] },
-  { emoji: '✈️', name: 'Aerospace',            arm: 'RP Industries', color: 'rp',   sub: 'High-Tolerance Components', desc: 'Aluminium and titanium billet components machined to exacting aerospace specifications.', services: ['Billet Machining', 'VMC Precision Parts'] },
-  { emoji: '🏭', name: 'Heavy Engineering',    arm: 'RP Industries', color: 'rp',   sub: 'Custom Machined Parts',     desc: 'Heavy machinery components, custom profiles and jigs for large-scale manufacturing.', services: ['Billet Machining', 'Jigs & Fixtures'] },
+  { emoji: '🚗', name: 'Automotive OEM',      arm: 'AARPEE Industries', color: 'rp',   sub: 'Tier 1 & Tier 2 Suppliers', desc: 'Engine blocks, brackets, rubber seals, gaskets — 30 years of automotive manufacturing trust.', services: ['VMC Machining', 'Billet Machining', 'Rubber Seals', 'Jigs & Fixtures'] },
+  { emoji: '✈️', name: 'Aerospace',            arm: 'AARPEE Industries', color: 'rp',   sub: 'High-Tolerance Components', desc: 'Aluminium and titanium billet components machined to exacting aerospace specifications.', services: ['Billet Machining', 'VMC Precision Parts'] },
+  { emoji: '🏭', name: 'Heavy Engineering',    arm: 'AARPEE Industries', color: 'rp',   sub: 'Custom Machined Parts',     desc: 'Heavy machinery components, custom profiles and jigs for large-scale manufacturing.', services: ['Billet Machining', 'Jigs & Fixtures'] },
   { emoji: '🎨', name: 'Art & Craft',          arm: 'Thry Co',       color: 'thry', sub: 'Sculptures & Installations', desc: 'FDM for massive architectural installations to intricate SLA decorative pieces.', services: ['FDM Large-Scale', 'SLA Fine Detail'] },
   { emoji: '💎', name: 'Jewellery',            arm: 'Thry Co',       color: 'thry', sub: 'Casting Patterns & Moulds', desc: 'SLA ultra-high resolution for perfect jewellery casting patterns. Zero visible layer lines.', services: ['SLA Resin Printing', 'Casting Patterns'] },
   { emoji: '🔬', name: 'Medical Modeling',     arm: 'Thry Co',       color: 'thry', sub: 'Anatomical Models',         desc: 'High-accuracy SLA and SLS for dental models, surgical planning and study pieces.', services: ['SLA High Resolution', 'SLS Nylon Parts'] },
@@ -23,7 +23,7 @@ export default function Sectors() {
             stack serves industries that demand precision and creativity.
           </p>
           <div style={{ display: 'flex', gap: 12, marginTop: 24 }}>
-            <span className="badge badge-rp">RP Industries — Subtractive</span>
+            <span className="badge badge-rp">AARPEE Industries — Subtractive</span>
             <span className="badge badge-thry">Thry Co — Additive</span>
           </div>
         </div>

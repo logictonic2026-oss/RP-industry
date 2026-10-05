@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="footer__brand">
             <Link to="/" className="footer__logo-link">
-              <img src="/rp-group-logo.png" alt="RP Group" className="footer__logo" />
+              <img src="/aarpee-group-logo.png" alt="AARPEE Group" className="footer__logo" />
             </Link>
             <p className="footer__tagline">
               Precision Machining + Rapid Prototyping.<br />
@@ -36,15 +36,15 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* RP Industries */}
+          {/* AARPEE Industries */}
           <div className="footer__col">
-            <div className="footer__col-heading footer__col-heading--rp">RP Industries</div>
+            <div className="footer__col-heading footer__col-heading--rp">AARPEE Industries</div>
             <ul className="footer__links">
-              <li><Link to="/rp-industries">Overview</Link></li>
-              <li><Link to="/rp-industries/vmc">VMC Machining</Link></li>
-              <li><Link to="/rp-industries/billet">Billet Machining</Link></li>
-              <li><Link to="/rp-industries/rubber">Rubber Components</Link></li>
-              <li><Link to="/rp-industries/jigs">Jigs & Fixtures</Link></li>
+              <li><Link to="/aarpee-industries">Overview</Link></li>
+              <li><Link to="/aarpee-industries/vmc">VMC Machining</Link></li>
+              <li><Link to="/aarpee-industries/billet">Billet Machining</Link></li>
+              <li><Link to="/aarpee-industries/rubber">Rubber Components</Link></li>
+              <li><Link to="/aarpee-industries/jigs">Jigs & Fixtures</Link></li>
             </ul>
           </div>
 
@@ -78,7 +78,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© {year} RP Group. All rights reserved. RP Industries &amp; Thry Co.</p>
+          <p>© {year} AARPEE Group. All rights reserved. AARPEE Industries &amp; Thry Co.</p>
           <p>Precision Machining + Rapid Prototyping — Pune, India.</p>
         </div>
       </div>

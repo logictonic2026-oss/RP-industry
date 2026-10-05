@@ -42,7 +42,7 @@ export default function CarScroller() {
             <CarScene progress={scrollYProgress} stage={active} reducedMotion={reducedMotion} onReady={setModelReady} />
           </Suspense>{!modelReady && <div className="car-story__loading" role="status">Preparing the automotive studio…</div>}</SceneBoundary>}
         </div>
-        <header className="car-story__top"><span><i /> INSIDE THE ENGINEERING</span><span>RP GROUP <b>/</b> AUTOMOTIVE EXPLORER</span></header>
+        <header className="car-story__top"><span><i /> INSIDE THE ENGINEERING</span><span>AARPEE GROUP <b>/</b> AUTOMOTIVE EXPLORER</span></header>
         <div className="car-story__heading" key={current.id}>
           <p className="car-story__eyebrow">{current.eyebrow}</p>
           <h2>{current.title}</h2>

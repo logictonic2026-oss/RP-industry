@@ -1,8 +1,8 @@
-/* Root carries the background image — it shows through the transparent WebGL canvas */
-.automotive-experience { position: relative; background-image: url('/rp-home-background.png'); background-size: cover; background-position: center top; background-attachment: fixed; color: #f2f3ee; isolation: isolate; }
+/* Factory architecture and floor render together inside the WebGL canvas. */
+.automotive-experience { position: relative; background: #253440; color: #f2f3ee; isolation: isolate; }
 .experience-world { position: sticky; top: 0; height: 100svh; min-height: 660px; margin-bottom: -100svh; overflow: hidden; pointer-events: none; }
 .experience-atmosphere, .experience-warmth, .experience-canvas, .experience-vignette { position: absolute; inset: 0; }
-/* Atmosphere is now a dark overlay over the background image */
+/* Keep the copy readable over the manufacturing bay. */
 .experience-atmosphere { background: linear-gradient(135deg, rgba(8, 14, 20, 0.72) 0%, rgba(8, 14, 20, 0.45) 60%, rgba(8, 14, 20, 0.25) 100%); }
 .experience-warmth { background: radial-gradient(ellipse at 70% 38%, rgba(176, 132, 87, 0.18), transparent 52%); }
 .experience-canvas { z-index: 1; }

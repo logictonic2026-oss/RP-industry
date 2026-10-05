@@ -1,9 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import SmoothScroll from './components/SmoothScroll';
 import { Header, Footer, RoutePosition } from './site/Layout';
 import { HomePage, AboutPage, OverviewPage, ServiceDetailPage, SectorsPage, ApplicationsPage, NotFoundPage } from './site/Pages';
 import { ContactPage, QuotePage } from './site/Forms';
+import CreditsPage from './site/CreditsPage';
 import './site/site.css';
+import './site/Minimal.css';
+
+function LegacyIndustryRedirect() {
+  const { pathname, search, hash } = useLocation();
+  return <Navigate replace to={`${pathname.replace(/^\/rp-industries/, '/aarpee-industries')}${search}${hash}`} />;
+}
 
 export default function App() {
   return (
@@ -20,8 +27,10 @@ export default function App() {
             <Route path="/sectors" element={<SectorsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/rfq" element={<QuotePage />} />
-            <Route path="/rp-industries" element={<OverviewPage arm="rp" />} />
-            <Route path="/rp-industries/:serviceId" element={<ServiceDetailPage />} />
+            <Route path="/credits" element={<CreditsPage />} />
+            <Route path="/aarpee-industries" element={<OverviewPage arm="rp" />} />
+            <Route path="/aarpee-industries/:serviceId" element={<ServiceDetailPage />} />
+            <Route path="/rp-industries/*" element={<LegacyIndustryRedirect />} />
             <Route path="/tryco" element={<OverviewPage arm="thry" />} />
             <Route path="/tryco/portfolio" element={<ApplicationsPage />} />
             <Route path="/tryco/:serviceId" element={<ServiceDetailPage />} />
