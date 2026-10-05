@@ -4,6 +4,7 @@ import { Header, Footer, RoutePosition } from './site/Layout';
 import { HomePage, AboutPage, OverviewPage, ServiceDetailPage, SectorsPage, ApplicationsPage, NotFoundPage } from './site/Pages';
 import { ContactPage, QuotePage } from './site/Forms';
 import CreditsPage from './site/CreditsPage';
+import DesignEnquiryPopup from './components/DesignEnquiryPopup';
 import './site/site.css';
 import './site/Minimal.css';
 
@@ -38,6 +39,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <DesignEnquiryPopup />
       </BrowserRouter>
     </SmoothScroll>
   );
